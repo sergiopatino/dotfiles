@@ -1,6 +1,7 @@
-[submodule ".config/tmux"]
-	path = .config/tmux
-	url = https://github.com/sergiopatino/tmux-config
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = https://github.com/sergiopatino/vim-config
+	url = https://github.com/sergiopatino/vim-config.git
+	branch = sergio
+[submodule ".config/tmuxh"]
+	path = .config/tmuxh
+	url = https://github.com/sergiopatino/tmux-config
