@@ -1,4 +1,4 @@
-# Aliases
+# Aliases for git
 alias g='git'
 alias gst='git status'
 alias gd='git diff'
@@ -46,9 +46,6 @@ alias grhh='git reset HEAD --hard'
 alias gclean='git reset --hard; and git clean -dfx'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
-#remove the gf alias
-#alias gf='git ls-files | grep'
-
 alias gpoat='git push origin --all; and git push origin --tags'
 alias gmt='git mergetool --no-prompt'
 
@@ -61,8 +58,7 @@ alias gsta='git stash'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 
-# Will cd into the top of the current repository
-# or submodule.
+# Will cd into the top of the current repository or submodule.
 alias grt='cd (git rev-parse --show-toplevel; or echo ".")'
 
 # Git and svn mix
@@ -70,10 +66,9 @@ alias git-svn-dcommit-push='git svn dcommit; and git push github master:svntrunk
 
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
-#
+
 # Will return the current branch name
 # Usage example: git pull origin $(current_branch)
-#
 function current_branch
   set ref (git symbolic-ref HEAD 2> /dev/null); or \
   set ref (git rev-parse --short HEAD 2> /dev/null); or return
@@ -104,7 +99,6 @@ alias glp="_git_log_prettily"
 # Work In Progress (wip)
 # These features allow to pause a branch development and switch to another one (wip)
 # When you want to go back to work, just unwip it
-#
 # This function return a warning if the current branch is a wip
 function work_in_progress
   if git log -n 1 | grep -q -c wip; then
