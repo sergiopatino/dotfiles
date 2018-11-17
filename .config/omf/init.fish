@@ -28,3 +28,7 @@ status --is-interactive; and source (rbenv init - --no-rehash|psub)
 
 # Clear duplicate entries in PATH
 varclear PATH
+
+# Tab completions Serverless
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
