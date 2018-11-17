@@ -4,4 +4,3 @@ function flush_routes
   sudo route flush
   sudo ifconfig en0 up
 end
-
