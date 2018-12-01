@@ -1,0 +1,2 @@
+set -gx PIPENV_SHELL_FANCY 1
+
