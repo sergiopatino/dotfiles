@@ -13,6 +13,7 @@ set -gx TK_REGION 'us-west-2'
 set -gx TK_SUBNET_ID 'subnet-17991e4c'
 set -gx TK_SECURITY_GROUP_ID 'sg-f9c54383'
 set -gx TK_SSH_GATEWAY 'oim-dev-us-west-2'
+set -gx TK_AMZN1_AMI_ID 'ami-07e8770859f733a16'
 
 # us-east-2
 #set -gx TK_REGION 'us-east-2'
