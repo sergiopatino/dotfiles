@@ -1,47 +1,53 @@
-function __ase_set_env_from_section -d 'Parse the section section_name from file available in file_path' -a 'section_name' 'file_path'
-    # section_name must be a regular expression to make sure the best possible match
-    # Get all the lines after the regex of section_name
-    set -x lines (grep -A99 -E "$section_name" $file_path)
-    # echo $lines
-
-    for line in $lines[2..-1]
-        # Skip if line is emty
-        if  test -z "$line"
-            continue
-        end
-
-        # The grep will return 0 when match
-        if echo $line | grep -E '^ *\[.*\] *$' > /dev/null
-            # Beginning of new section
-            break
-        end
-
-        # Parse the line and set envrionment variables
-        # echo $line
-        set -x env_name (echo $line | grep -Eo '^ *[^=]+ *' | xargs )
-        set -x env_val (echo $line | grep -Eo ' *[^=]+ *$' | xargs)
-
-        # Do eiam login if found in config
-        if [ $env_name = "credential_process" ]
-            set -x eiam_enabled 1
-        end
-
-        echo "Setting $env_name to $env_val"
-
-        set -xg $env_name $env_val
-    end
-end
-
-function ase -d 'Set up AWS key environment variable to override the profile variable' -a aws_profile
+function ase -d 'Sets AWS Session Keys' -a aws_profile
     set -x CONFIG_FILE ~/.aws/config
-    set -x CREDENTIAL_FILE ~/.aws/credentials
-
     if test -n "$aws_profile"
-        if grep -Eo "\[(profile)? *$aws_profile\]" $CONFIG_FILE > /dev/null
-            # Set the env from config file
-            __ase_set_env_from_section  "\[$aws_profile ?\]" $CREDENTIAL_FILE
+        if fgrep -q "[profile $aws_profile]" $CONFIG_FILE
+
+            if test -n "$AWS_PROFILE"
+                echo "Unsetting AWS_PROFILE environment variable"
+                set -eg AWS_PROFILE
+            end
+
+            set -x lines (grep -A99 -E "\[profile $aws_profile\]" $CONFIG_FILE)
+            for line in $lines[2..-1]
+                # Skip if line is emty
+                if  test -z "$line"
+                    continue
+                end
+
+                # The grep will return 0 when match
+                if echo $line | grep -Eq '^ *\[.*\] *$'
+                    # Beginning of new section
+                    break
+                end
+
+                set -x env_name (echo $line | grep -Eo '^ *[^=]+ *' | xargs)
+                set -x env_val (echo $line | grep -Eo ' *[^=]+ *$' | xargs)
+
+                # Do eiam login if found in config
+                if [ $env_name = "credential_process" ]
+                    eval eiam login spatino
+                    eval eiam creds refresh $aws_profile
+                end
+
+                if [ $env_name = "region" ]
+                    set -x env_name 'AWS_DEFAULT_REGION'
+                    set -xg $env_name $env_val
+                end
+            end
+
+            set -gx AWS_ACCESS_KEY_ID (eiam creds env $aws_profile aws_access_key_id)
+            set -gx AWS_SECRET_ACCESS_KEY (eiam creds env $aws_profile aws_secret_access_key)
+            set -gx AWS_SESSION_TOKEN (eiam creds env $aws_profile aws_session_token)
         else
             echo "Could NOT find profile $aws_profile in config file ($CONFIG_FILE). No profile set"
         end
+    else
+       if test -n "$AWS_DEFAULT_REGION"
+           echo "Region: $AWS_DEFAULT_REGION"
+       else
+           echo "Region: No region set"
+       end
     end
 end
+

@@ -1,7 +1,9 @@
 package https://github.com/elmisback/plugin-fasd
 package https://github.com/kennethreitz/fish-pipenv
 theme agnoster
+theme batman
 theme bobthefish
+theme budspencer
 theme cbjohnson
 theme default
 theme ocean
