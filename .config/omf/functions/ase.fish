@@ -3,10 +3,10 @@ function ase -d 'Sets AWS Session Keys' -a aws_profile
     if test -n "$aws_profile"
         if fgrep -q "[profile $aws_profile]" $CONFIG_FILE
 
-            if test -n "$AWS_PROFILE"
-                echo "Unsetting AWS_PROFILE environment variable"
-                set -eg AWS_PROFILE
-            end
+            #if test -n "$AWS_PROFILE"
+            #    echo "Unsetting AWS_PROFILE environment variable"
+            #    set -eg AWS_PROFILE
+            #end
 
             set -x lines (grep -A99 -E "\[profile $aws_profile\]" $CONFIG_FILE)
             for line in $lines[2..-1]
@@ -27,7 +27,13 @@ function ase -d 'Sets AWS Session Keys' -a aws_profile
                 # Do eiam login if found in config
                 if [ $env_name = "credential_process" ]
                     eval eiam login spatino
-                    eval eiam creds refresh $aws_profile
+
+                    if test -z (eiam creds list | grep $aws_profile)
+                        set -x accountid (echo $env_val | awk '{print $4}')
+                        eval eiam creds get $accountid PowerUser
+                    else
+                        eval eiam creds refresh $aws_profile
+                    end
                 end
 
                 if [ $env_name = "region" ]
