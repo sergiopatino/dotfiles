@@ -12,6 +12,7 @@ SETUVAR AGNOSTER_SEGMENT_SEPARATOR:\ue0b0\x1e\x20\ue0b1\x20
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_init_3_x:\x1d
 SETUVAR aws_profile:oim\x2ddev
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr

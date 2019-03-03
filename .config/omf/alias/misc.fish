@@ -22,10 +22,6 @@ alias le="/usr/local/share/nvim/runtime/macros/less.sh"
 # SSH
 alias ss="/usr/local/bin/ssh"
 
-# Test Kitchen
-alias k="kitchen"
-alias ks="kitchen status"
-
 # Terraform
 alias tf="terraform"
 alias tfp="terraform plan"
