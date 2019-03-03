@@ -22,3 +22,4 @@ set -g theme_color_scheme zenburn
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_project_dir_length 1
 set -g theme_newline_cursor yes
+set -g fish_key_bindings hybrid_bindings
