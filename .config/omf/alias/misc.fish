@@ -13,11 +13,9 @@ alias lynx="lynx -vikeys"
 alias t="tmux"
 alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 
-# User less instead of more and cat
-alias more="/usr/local/share/nvim/runtime/macros/less.sh"
-alias m="/usr/local/share/nvim/runtime/macros/less.sh"
-alias less="/usr/local/share/nvim/runtime/macros/less.sh"
-alias le="/usr/local/share/nvim/runtime/macros/less.sh"
+# User less from nvim
+[ -f /usr/local/share/nvim/runtime/macros/less.sh ]; and alias less="/usr/local/share/nvim/runtime/macros/less.sh"
+[ -f /usr/local/share/nvim/runtime/macros/less.sh ]; and alias le="/usr/local/share/nvim/runtime/macros/less.sh"
 
 # SSH
 alias ss="/usr/local/bin/ssh"
