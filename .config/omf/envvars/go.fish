@@ -1,7 +1,7 @@
 # GOPATH
 [ -f $HOME/Code/go ]; and set -gx GOPATH $HOME/Code/go
-[ -f /usr/local/opt/go/libexec ]; and set -x GOROOT /usr/local/opt/go/libexec
-set PATH $GOPATH/bin $GOROOT/bin $PATH
+[ -f $HOME/src/go ]; and set -gx GOPATH $HOME/src/go
+# [ -f /usr/local/opt/go/libexec ]; and set -x GOROOT /usr/local/opt/go/libexec
 
 if test -n "$GOPATH"
     set PATH $GOPATH/bin $PATH
