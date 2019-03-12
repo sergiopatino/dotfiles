@@ -1,6 +1,5 @@
 # VIM shortcuts
-alias vim="/usr/local/bin/nvim"
-alias vi="/usr/local/bin/nvim"
+alias vi="/usr/local/bin/vim"
 alias v="/usr/local/bin/nvim"
 
 # Determine public IP
@@ -33,3 +32,9 @@ alias hs="history search"
 
 # Clear
 alias c="clear"
+
+# df
+alias dfh="df -hP"
+
+# ls
+alias l="ls"
