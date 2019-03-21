@@ -1,6 +1,6 @@
 # VIM shortcuts
-alias vi="/usr/local/bin/vim"
-alias v="/usr/local/bin/nvim"
+alias vi="nvim"
+alias v="nvim"
 
 # Determine public IP
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -17,7 +17,7 @@ alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 [ -f /usr/local/share/nvim/runtime/macros/less.sh ]; and alias le="/usr/local/share/nvim/runtime/macros/less.sh"
 
 # SSH
-alias ss="/usr/local/bin/ssh"
+alias ss="ssh"
 
 # Terraform
 alias tf="terraform"
