@@ -1,9 +1,8 @@
 # VIM shortcuts
-alias vi="nvim"
 alias v="nvim"
 
 # Determine public IP
-alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Lynx with VI-keys
 alias lynx="lynx -vikeys"
@@ -38,3 +37,8 @@ alias dfh="df -hP"
 
 # ls
 alias l="ls"
+
+# Use Trash on Darwin
+if [ $OS = "Darwin" ]
+  alias rm="rmtrash"
+end

@@ -11,13 +11,13 @@ end
 
 set PATH ~/.local/bin/ $PATH
 
-# Source aliases
-for file in $OMF_CONFIG/alias/*.fish
+# Source envvars
+for file in $OMF_CONFIG/vars/*.fish
    source $file
 end
 
-# Source envvars
-for file in $OMF_CONFIG/envvars/*.fish
+# Source aliases
+for file in $OMF_CONFIG/alias/*.fish
    source $file
 end
 
