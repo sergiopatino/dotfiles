@@ -40,5 +40,5 @@ alias l="ls"
 
 # Use Trash on Darwin
 if [ $OS = "Darwin" ]
-  alias rm="rmtrash"
+  alias rmt="rmtrash"
 end

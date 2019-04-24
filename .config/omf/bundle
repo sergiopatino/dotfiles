@@ -1,5 +1,5 @@
 package https://github.com/kennethreitz/fish-pipenv
-package https://github.com/znculee/fish-fasd
+package https://github.com/sergiopatino/fish-fasd
 theme agnoster
 theme batman
 theme bobthefish
