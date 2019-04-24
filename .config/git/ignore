@@ -30,4 +30,6 @@ tmp/
 node_modules/
 bower_components/
 .netrwhist
+.python-version
+.ruby-version
 
