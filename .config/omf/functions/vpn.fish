@@ -4,6 +4,6 @@ function vpn --description 'Login to Intuit VPN'
         --protocol=gp \
         --passwd-on-stdin \
         --user=$INTU_USER \
-        --script='vpn-slice -v --dump 10.0.0.0/8' \
-        $INTU_VPN
+        --script="vpn-slice -v --dump $INTU_VPN_HOSTS" \
+        $INTU_VPN_URL
 end
