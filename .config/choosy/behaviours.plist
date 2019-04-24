@@ -17,7 +17,7 @@
 		<key>enabled</key>
 		<true/>
 		<key>predicate</key>
-		<string>URL CONTAINS "intuit.com" OR URL CONTAINS "intuit.net" OR URL CONTAINS "waveront.com"</string>
+		<string>URL CONTAINS "intuit.com" OR URL CONTAINS "intuit.net" OR URL CONTAINS "wavefront.com"</string>
 		<key>title</key>
 		<string>Intuit</string>
 	</dict>
