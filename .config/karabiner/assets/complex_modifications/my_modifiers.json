@@ -23,6 +23,27 @@
       ]
     },
     {
+      "description": "Change right command + x to backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Change left command + a to control + a for Tmux in Terminals",
       "manipulators": [
         {

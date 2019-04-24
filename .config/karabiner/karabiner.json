@@ -243,6 +243,27 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Change right command + x to backspace",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
