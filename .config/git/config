@@ -8,7 +8,9 @@
 [includeIf "gitdir:~/Code/github/"]
 	path = ~/.git_github
 [includeIf "gitdir:~/Code/intuit/"]
-	path = ~/.git_intu
+	path = ~/.git_intuit
+[includeIf "gitdir:~/Code/go/src/github.intuit.com/"]
+	path = ~/.git_intuit
 [core]
 	excludesfile = ~/.config/git/ignore
 	hooksPath = ~/.config/git/hooks
