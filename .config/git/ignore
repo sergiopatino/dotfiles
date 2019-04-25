@@ -32,4 +32,5 @@ bower_components/
 .netrwhist
 .python-version
 .ruby-version
-
+.terraform
+.venv
