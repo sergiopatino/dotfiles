@@ -6,11 +6,11 @@
 [user]
 	name = Sergio Patino
 [includeIf "gitdir:~/Code/github/"]
-	path = ~/.git_github
+	path = ~/.crypt/github_personal
 [includeIf "gitdir:~/Code/intuit/"]
-	path = ~/.git_intuit
+	path = ~/.crypt/github_intuit
 [includeIf "gitdir:~/Code/go/src/github.intuit.com/"]
-	path = ~/.git_intuit
+	path = ~/.crypt/github_intuit
 [core]
 	excludesfile = ~/.config/git/ignore
 	hooksPath = ~/.config/git/hooks
