@@ -9,7 +9,11 @@ if test -n "$GOPATH"
     set PATH $GOPATH/bin $PATH
 end
 
+# Add local bin to PATH
 set PATH ~/.local/bin/ $PATH
+
+# Add Homebrew sbin to PATH
+set PATH /usr/local/sbin/ $PATH
 
 # Source envvars
 for file in $OMF_CONFIG/vars/*.fish
