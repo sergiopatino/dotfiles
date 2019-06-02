@@ -147,7 +147,7 @@ draw_bold_text_with_bright_colors: true
 # Nord color scheme
 colors:
   primary:
-    background: '0x1C1C1C1C'
+    background: '0x1D1F21'
     foreground: '0xD8DEE9'
   cursor:
     text: '0x2E3440'

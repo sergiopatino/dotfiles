@@ -1,6 +1,11 @@
 # VIM shortcuts
 alias v="nvim"
 
+if [ $OS = "Darwin" ]
+  alias vi="nvim"
+
+end
+
 # Determine public IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
