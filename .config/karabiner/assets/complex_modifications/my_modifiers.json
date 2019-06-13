@@ -23,7 +23,7 @@
       ]
     },
     {
-      "description": "Change right command + x to backspace",
+      "description": "Change right command + x to delete or backspace",
       "manipulators": [
         {
           "type": "basic",
@@ -38,6 +38,28 @@
           "to": [
             {
               "key_code": "delete_or_backspace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change right command + X to forward delete",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward"
             }
           ]
         }
