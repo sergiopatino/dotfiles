@@ -5,6 +5,8 @@ else if test -d $HOME/src/go
     set -gx GOPATH $HOME/src/go
 end
 
+set -gx GO111MODULE on
+
 if test -n "$GOPATH"
     set PATH $GOPATH/bin $PATH
 end

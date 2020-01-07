@@ -71,7 +71,7 @@
 [transfer]
 	# https://git-scm.com/docs/git-config#git-config-transferfsckObjects
 	# via https://groups.google.com/forum/#!topic/binary-transparency/f-BI4o8HZW0
-	fsckobjects = true
+	fsckobjects = false
 [color]
 	ui = true
 	pager = true
