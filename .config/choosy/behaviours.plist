@@ -10,14 +10,14 @@
 			<key>path</key>
 			<string>/Applications/Google Chrome.app</string>
 			<key>profileName</key>
-			<string>Profile 1</string>
+			<string>Profile 2</string>
 			<key>type</key>
 			<string>ChoosyChromeProfileMode</string>
 		</dict>
 		<key>enabled</key>
 		<true/>
 		<key>predicate</key>
-		<string>URL CONTAINS "intuitcorp.quickbase.com" OR URL CONTAINS "intuit.service-now.com" OR URL CONTAINS "intuit.com" OR URL CONTAINS "intuit.net" OR URL CONTAINS "wavefront.com" OR URL CONTAINS "agi-build-log" OR URL == "align.ustream.tv"</string>
+		<string>URL CONTAINS "//in/" OR URL CONTAINS "intuitcorp.quickbase.com" OR URL CONTAINS "intuit.service-now.com" OR URL CONTAINS "intuit.com" OR URL CONTAINS "intuit.net" OR URL CONTAINS "wavefront.com" OR URL CONTAINS "agi-build-log" OR URL == "align.ustream.tv" OR URL CONTAINS "intuit.aha.io" OR URL CONTAINS "smartsheet.com" OR URL == "" OR sourceApp == "/Applications/BlueJeans.app" OR sourceApp == "/Applications/Microsoft Outlook.app"</string>
 		<key>title</key>
 		<string>Intuit</string>
 	</dict>
@@ -29,7 +29,7 @@
 			<key>path</key>
 			<string>/Applications/Google Chrome.app</string>
 			<key>profileName</key>
-			<string>Profile 1</string>
+			<string>Profile 3</string>
 			<key>type</key>
 			<string>ChoosyChromeProfileMode</string>
 		</dict>
