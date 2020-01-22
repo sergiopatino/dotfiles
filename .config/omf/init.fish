@@ -6,6 +6,7 @@ else if test -d $HOME/src/go
 end
 
 set -gx GO111MODULE on
+set -gx GOROOT /usr/local/opt/go/libexec
 
 if test -n "$GOPATH"
     set PATH $GOPATH/bin $PATH
