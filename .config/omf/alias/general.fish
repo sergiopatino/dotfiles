@@ -10,6 +10,7 @@ if [ $OS = "Darwin" ]
   # Path Shortcuts
   alias gogithub='cd ~/Code/github'
   alias gointuit='cd ~/Code/intuit'
+  alias gotmux='cd ~/Code/github/tmux-config'
   alias gogo='cd ~/Code/go/src'
   alias godot='cd ~/Code/github/dotfiles'
   alias goconf='cd ~/.config'
@@ -68,6 +69,7 @@ alias md='mkdir -p'
 
 # ls
 alias l='ls -AlhF'
+alias lk='ls -AlF'
 alias u='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
