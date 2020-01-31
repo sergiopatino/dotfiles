@@ -14,6 +14,10 @@ alias lynx="lynx -vikeys"
 
 # TMUX shortcut
 alias t="tmux"
+alias ta='tmux attach -t'
+alias tls='tmux ls'
+alias tns='tmux new -s'
+alias tks='tmux kill-session -t'
 alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 
 # User less from nvim
@@ -37,11 +41,24 @@ alias hs="history search"
 # Clear
 alias c="clear"
 
+# Path Shortcuts
+alias codegit='cd ~/Code/github'
+alias codeintu='cd ~/Code/intuit'
+alias codego='cd ~/Code/go/src'
+alias dot='cd ~/Code/github/dotfiles'
+alias conf='cd ~/conf'
+alias viconf='cd ~/Code/github/vim-config'
+
 # df
-alias dfh="df -hP"
+alias dfh='df -HP'
+alias tf='tail -1000f'
+
+alias md='mkdir -p'
 
 # ls
-alias l="ls"
+alias l="ls -AlhF"
+alias u='cd ..'
+alias ...='cd ../..'
 
 # Use Trash on Darwin
 if [ $OS = "Darwin" ]
