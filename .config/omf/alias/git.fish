@@ -12,6 +12,7 @@ function gdv
   git diff -w $argv | view -
 end
 
+alias gclone='git clone'
 alias gc='git commit -v'
 alias gc!='git commit -v --amend'
 alias gca='git commit -v -a'
