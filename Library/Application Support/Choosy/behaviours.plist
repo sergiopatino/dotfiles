@@ -17,7 +17,7 @@
 		<key>enabled</key>
 		<true/>
 		<key>predicate</key>
-		<string>URL CONTAINS "//in/" OR URL CONTAINS "intuitcorp.quickbase.com" OR URL CONTAINS "intuit.service-now.com" OR URL CONTAINS "intuit.com" OR URL CONTAINS "intuit.net" OR URL CONTAINS "wavefront.com" OR URL CONTAINS "agi-build-log" OR URL == "align.ustream.tv" OR URL CONTAINS "intuit.aha.io" OR URL CONTAINS "smartsheet.com" OR URL == "" OR sourceApp == "/Applications/BlueJeans.app" OR sourceApp == "/Applications/Microsoft Outlook.app"</string>
+		<string>URL CONTAINS "//in/" OR URL CONTAINS "intuitcorp.quickbase.com" OR URL CONTAINS "intuit.service-now.com" OR URL CONTAINS "intuit.com" OR URL CONTAINS "intuit.net" OR URL CONTAINS "wavefront.com" OR URL CONTAINS "agi-build-log" OR URL == "align.ustream.tv" OR URL CONTAINS "intuit.aha.io" OR URL CONTAINS "smartsheet.com" OR URL == "smartsheets.com" OR sourceApp == "/Applications/BlueJeans.app" OR sourceApp == "/Applications/Microsoft Outlook.app"</string>
 		<key>title</key>
 		<string>Intuit</string>
 	</dict>
