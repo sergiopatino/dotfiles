@@ -8,14 +8,14 @@ if [ $OS = "Darwin" ]
   alias date='gdate'
 
   # Path Shortcuts
-  alias gogithub='cd ~/Code/github'
-  alias gointuit='cd ~/Code/intuit'
+  alias gogit='cd ~/Code/github'
+  alias gointu='cd ~/Code/intuit'
   alias gotmux='cd ~/Code/github/tmux-config'
   alias gogo='cd ~/Code/go/src'
   alias godot='cd ~/Code/github/dotfiles'
   alias goconf='cd ~/.config'
   alias goomf='cd ~/.config/omf'
-  alias govim='cd ~/Code/github/vim-config'
+  alias govi='cd ~/Code/github/vim-config'
   alias godl='cd ~/Downloads'
   alias rmt="rmtrash"
 
@@ -44,6 +44,7 @@ alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 
 # SSH
 alias s="ssh"
+alias vssh="v ~/.ssh/config"
 
 # Terraform
 alias tf="terraform"
@@ -74,6 +75,9 @@ alias u='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-# process lis
-alias ps='ps -Ao user,pid,%cpu,%mem,vsz,rss,tt,stat,start,time,command'
+# process list
+alias psa='ps -Ao user,pid,%cpu,%mem,vsz,rss,tt,stat,start,time,command'
 alias psfind='ps -Ao user,pid,%cpu,%mem,vsz,rss,tt,stat,start,time,command|fzy'
+
+# cat aws conf
+alias cataws='cat ~/.aws/config'
