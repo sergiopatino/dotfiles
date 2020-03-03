@@ -8,6 +8,9 @@ alias gup='git pull --rebase'
 alias gp='git push'
 alias gd='git diff'
 
+# Trigger empty commit
+alias gempty='git commit --allow-empty -m "Trigger empty commit"'
+
 function gdv
   git diff -w $argv | view -
 end

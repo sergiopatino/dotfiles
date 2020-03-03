@@ -19,10 +19,13 @@ if [ $OS = "Darwin" ]
   alias godl='cd ~/Downloads'
   alias rmt="rmtrash"
 
-  # OMF Reload
-  alias omfr='omf reload'
+  # df
+  alias df='df -hi'
 
 end
+
+# OMF Reload
+alias omfr='omf reload'
 
 # Determine public IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -45,6 +48,7 @@ alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 # SSH
 alias s="ssh"
 alias vssh="v ~/.ssh/config"
+alias cloudflix="ssh -L 8080:localhost:8080 -L 8090:localhost:8090 -L 8085:localhost:8085 -L 9091:localhost:9091 cloudflix"
 
 # Terraform
 alias tf="terraform"
@@ -60,9 +64,6 @@ alias hs='history | fzy'
 # Cd
 alias c="cd"
 
-
-# df
-alias df='df -hi'
 alias tf='tail -1000f'
 
 # Make dir
