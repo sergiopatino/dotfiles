@@ -48,7 +48,7 @@ alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 # SSH
 alias s="ssh"
 alias vssh="v ~/.ssh/config"
-alias cloudflix="ssh -L 8080:localhost:8080 -L 8090:localhost:8090 -L 8085:localhost:8085 -L 9091:localhost:9091 cloudflix"
+alias cloudflix="ssh -L 8080:localhost:8080 -L 8090:localhost:8090 -L 8085:localhost:8085 -L 9091:localhost:9091 cloudflix-linode"
 
 # Terraform
 alias tf="terraform"
@@ -82,3 +82,6 @@ alias psfind='ps -Ao user,pid,%cpu,%mem,vsz,rss,tt,stat,start,time,command|fzy'
 
 # cat aws conf
 alias cataws='cat ~/.aws/config'
+
+# curl AWS IPs
+alias awsips='curl -s https://ip-ranges.amazonaws.com/ip-ranges.json'
