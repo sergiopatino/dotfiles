@@ -6,6 +6,7 @@ if [ $OS = "Darwin" ]
             --passwd-on-stdin \
             --user=$INTU_USER \
             --script="vpn-slice -v --dump $INTU_VPN_HOSTS" \
+            --csd-wrapper=$HOME/.local/bin/hipreport.sh \
             $INTU_VPN_URL
     end
 end
