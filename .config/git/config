@@ -5,6 +5,7 @@
 #
 [user]
 	name = Sergio Patino
+	email = sergio@vertigobox.org
 [includeIf "gitdir:~/Code/github/"]
 	path = ~/.crypt/github_personal
 [includeIf "gitdir:~/Code/intuit/"]
@@ -39,6 +40,8 @@
 	showUntrackedFiles = all
 [fetch]
 	recurseSubmodules = true
+[pull]
+	rebase = false
 [push]
 	# Defines the action git push should take if no refspec is explicitly given:
 	# current = Push the current branch to update a branch with the same name on the receiving end
@@ -155,3 +158,8 @@
 	snapshots = !git stash list --grep snapshot
 [web]
 	browser = google-chrome
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

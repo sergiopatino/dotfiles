@@ -5,7 +5,7 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git pull'
 alias gup='git pull --rebase'
-alias gp='git push'
+alias gpush='git push'
 alias gd='git diff'
 
 # Trigger empty commit
@@ -88,6 +88,7 @@ end
 # these aliases take advantage of the previous function
 alias ggpull='git pull origin (current_branch)'
 alias ggpur='git pull --rebase origin (current_branch)'
+alias gmpull='git pull origin master'
 alias ggpush='git push origin (current_branch)'
 alias ggpnp='git pull origin (current_branch); and git push origin (current_branch)'
 

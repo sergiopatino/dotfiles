@@ -27,12 +27,13 @@ if test -d $HOME/Code/go
 else if test -d $HOME/src/go
     set -gx GOPATH $HOME/src/go
 end
+    set -gx GOBIN $GOPATH/bin
 
 set -gx GO111MODULE on
 set -gx GOROOT /usr/local/opt/go/libexec
 
-if test -n "$GOPATH"
-    set PATH $GOPATH/bin $PATH
+if test -n "$GOBIN"
+    set PATH $GOBIN $PATH
 end
 
 # Clear duplicate entries in PATH

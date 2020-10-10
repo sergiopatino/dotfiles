@@ -2,6 +2,7 @@
 alias v="nvim"
 
 if [ $OS = "Darwin" ]
+  alias ag="ag --ignore=vendor"
   alias vi="nvim"
 
   # User GNU date
@@ -39,6 +40,7 @@ alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tns='tmux new -s'
 alias tks='tmux kill-session -t'
+alias tkill='tmux kill-server'
 alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 
 # User less from nvim
