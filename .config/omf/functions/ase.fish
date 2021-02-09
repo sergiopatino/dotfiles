@@ -1,6 +1,7 @@
 function ase -d 'Sets AWS Session Keys' -a aws_profile
     set -x CONFIG_FILE ~/.aws/config
-    set -Ux http_proxy http://intuit:8080
+    set -x http_proxy http://intuit:8080
+    set -x https_proxy http://intuit:8080
     if test -n "$aws_profile"
         if fgrep -q "[profile $aws_profile]" $CONFIG_FILE
 
@@ -57,4 +58,3 @@ function ase -d 'Sets AWS Session Keys' -a aws_profile
        end
     end
 end
-
